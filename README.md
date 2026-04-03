@@ -23,6 +23,7 @@ desenvolvido por mim e usado em produção real.
 | `/casos-de-teste` | Casos de teste documentados |
 | `/bugs-encontrados` | Bugs encontrados, analisados e corrigidos |
 | `/evidencias` | Screenshots e provas de execução |
+| `/postman` | Coleções e documentação de testes de API |
 | `README.md` | Visão geral do portfólio e validações realizadas |
 
   📬 Contato
@@ -67,3 +68,20 @@ O fluxo foi executado com sucesso em teste real, com evidência de:
 - Verificação de regras de negócio
 - Apoio em diagnóstico técnico com logs
 - Documentação de testes e bugs
+
+## 🔜 Próximas etapas de QA e API
+
+As próximas evoluções deste portfólio serão:
+
+- criação e organização das collections do Postman;
+- documentação dos principais endpoints da API;
+- registro contínuo de bugs encontrados durante os testes;
+- expansão dos casos de teste manuais e de integração;
+- acompanhamento das tarefas e bugs via Jira;
+- evidências adicionais de testes em ambiente real.
+
+### Próximo foco
+- autenticação
+- rotas de push notifications
+- validação de endpoints do backend
+- documentação dos testes de API
