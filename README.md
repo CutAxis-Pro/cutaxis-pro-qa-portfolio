@@ -16,14 +16,14 @@ desenvolvido por mim e usado em produção real.
 - Confluence (documentação)
 - Git/GitHub
 
-  📋 O que você vai encontrar aqui
+📘 O que você vai encontrar aqui
+
 | Pasta | Conteúdo |
-|---|---|
-| `/plano-de-testes` | Estratégia e escopo dos testes |
+|------|----------|
 | `/casos-de-teste` | Casos de teste documentados |
-| `/bug-reports` | Bugs encontrados e reportados |
-| `/testes-api-postman` | Coleção de testes de API |
-| `/evidencias` | Screenshots de execução |
+| `/bugs-encontrados` | Bugs encontrados, analisados e corrigidos |
+| `/evidencias` | Screenshots e provas de execução |
+| `README.md` | Visão geral do portfólio e validações realizadas |
 
   📬 Contato
 - LinkedIn: [hugo-vieira-213b38180](https://www.linkedin.com/in/hugo-vieira-213b38180/)
