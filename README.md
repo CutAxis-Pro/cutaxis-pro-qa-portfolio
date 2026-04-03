@@ -28,3 +28,42 @@ desenvolvido por mim e usado em produção real.
   📬 Contato
 - LinkedIn: [hugo-vieira-213b38180](https://www.linkedin.com/in/hugo-vieira-213b38180/)
 - Email: vieirahugo761@gmail.com
+
+## ✅ Validação recente — Fluxo mensal de relatórios
+
+Foi validado com sucesso o fluxo mensal do sistema CutAxis Pro, incluindo:
+
+- envio de relatório mensal por email;
+- envio de push notification após o email;
+- suporte a usuários com zero dados no mês;
+- envio correto para usuários com dados reais;
+- reset mensal dos usuários comuns;
+- preservação dos dados do ADMIN CUTAXIS.
+
+### Resultado final
+O fluxo foi executado com sucesso em teste real, com evidência de:
+- email enviado;
+- push recebida no dispositivo;
+- reset aplicado aos usuários comuns;
+- admin preservado.
+
+### Artefatos relacionados
+- [CT-002 — Relatório mensal com email, push e reset](./casos-de-teste/CT-002-relatorio-mensal-email-push-reset.md)
+- [BUG-001 — Relatório mensal não era enviado](./bugs-encontrados/BUG-001-relatorio-mensal-nao-enviado.md)
+- [BUG-002 — Usuários sem dados não recebiam email](./bugs-encontrados/BUG-002-usuarios-sem-dados-nao-recebiam-email.md)
+- [BUG-003 — Admin sofria reset indevido](./bugs-encontrados/BUG-003-admin-sofria-reset.md)
+
+### Evidências
+- `evidencias/relatorio-mensal-terminal.png`
+- `evidencias/relatorio-mensal-mobile-comprovacao.png`
+
+## 🎯 Competências demonstradas neste projeto
+
+- Testes funcionais end-to-end
+- Validação de fluxo mensal automatizado
+- Teste de integração frontend + backend
+- Validação de push notifications web/mobile
+- Investigação de bugs em ambiente real
+- Verificação de regras de negócio
+- Apoio em diagnóstico técnico com logs
+- Documentação de testes e bugs
