@@ -29,7 +29,8 @@ Health check validado:
 
 - GET /health
 
-## Teste executado
+## Testes executados
+
 ### Login da API
 Endpoint testado:
 
@@ -41,36 +42,40 @@ Resultado obtido:
 - Retorno com dados do usuário autenticado
 - Retorno de token JWT
 
-## Achado importante de QA
-Durante a validação do login, foi identificado que o backend aceita corretamente o campo:
+### Registro de usuário
+Endpoint testado:
 
-- `password`
+- POST /auth/register
 
-e não:
+Resultado obtido:
 
-- `senha`
+- 201 Created
+- Usuário criado com sucesso
+- Retorno com dados do usuário
+- Resposta válida da API
 
-Quando o payload foi enviado com `password`, a autenticação funcionou corretamente no Postman.
-
-## Evidência relacionada
-Arquivo salvo em:
+  
+## Evidências relacionadas
+Arquivos salvos em:
 
 - `evidencias/postman-auth-login-200-ok.png`
+- `evidencias/postman-auth-register-201-created.png`
 
+  
 ## Status atual
 Concluído:
 - collection criada;
 - estrutura inicial organizada;
 - environment Production selecionado;
 - base da API validada;
-- login testado com sucesso via Postman.
+- endpoint de login testado com sucesso via Postman;
+- endpoint de register testado com sucesso via Postman.
 
 Próximos passos:
-- documentar o caso de teste formal do login;
+- atualizar a task CAPA-27 no Jira com a validação do register;
 - salvar e reutilizar token em requests autenticados;
-- testar endpoint de registro;
-- validar endpoints de push notifications;
-- continuar a documentação dos resultados no GitHub.
+- iniciar validação dos endpoints de push notifications;
+- continuar documentação dos resultados no GitHub.
 
 ## Observação de segurança
 Tokens de autenticação não devem ser expostos em documentação pública, commits ou screenshots abertas.
