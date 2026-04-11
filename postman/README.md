@@ -23,11 +23,11 @@ Environment selecionado:
 
 Base da API validada:
 
-- https://cutaxis-backend.onrender.com
+- `https://cutaxis-backend.onrender.com`
 
 Health check validado:
 
-- GET /health
+- [GET /health](https://cutaxis-backend.onrender.com/health)
 
 ## Testes executados
 
