@@ -54,13 +54,24 @@ Resultado obtido:
 - Retorno com dados do usuário
 - Resposta válida da API
 
+### Obter VAPID Key
+Endpoint testado:
+
+- GET /push/vapid-key
+
+Resultado obtido:
+
+- 200 OK
+- Retorno da publicKey
+- Resposta válida em JSON
+
   
 ## Evidências relacionadas
 Arquivos salvos em:
 
 - `evidencias/postman-auth-login-200-ok.png`
 - `evidencias/postman-auth-register-201-created.png`
-
+- `evidencias/postman-push-vapid-key-200-ok.png`
   
 ## Status atual
 Concluído:
@@ -70,12 +81,13 @@ Concluído:
 - base da API validada;
 - endpoint de login testado com sucesso via Postman;
 - endpoint de register testado com sucesso via Postman.
+- endpoint GET /push/vapid-key testado com sucesso via Postman.
 
 Próximos passos:
-- atualizar a task CAPA-27 no Jira com a validação do register;
-- salvar e reutilizar token em requests autenticados;
-- iniciar validação dos endpoints de push notifications;
-- continuar documentação dos resultados no GitHub.
-
+- continuar validação dos endpoints de push notifications;
+- atualizar a task CAPA-28 no Jira com o progresso do módulo Push;
+- documentar novos resultados no GitHub;
+- seguir para os próximos endpoints do módulo Push.
+  
 ## Observação de segurança
 Tokens de autenticação não devem ser expostos em documentação pública, commits ou screenshots abertas.
