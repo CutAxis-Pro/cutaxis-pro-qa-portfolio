@@ -46,8 +46,16 @@ Documentar os principais endpoints identificados e/ou validados durante a fase d
 | Método | Endpoint | Módulo | Status | Observação |
 |--------|----------|--------|--------|------------|
 | GET | `/dashboard` | Core Features | Identificado | Confirmado via Network do navegador |
-| GET | `/cuts` | Core Features | Identificado | Request observada na aba Network; URL completa ainda será confirmada |
-| GET | `/meats` | Core Features | Identificado | Request observada na aba Network; URL completa ainda será confirmada |
+| GET | `/cuts` | Core Features | Identificado | Confirmado via Network do navegador |
+| GET | `/meats` | Core Features | Identificado | Confirmado via Network do navegador |
+
+
+## 5. URLs completas confirmadas via Network
+
+- `GET https://cutaxis-backend.onrender.com/dashboard`
+- `GET https://cutaxis-backend.onrender.com/cuts`
+- `GET https://cutaxis-backend.onrender.com/meats`
+
 
 ---
 
