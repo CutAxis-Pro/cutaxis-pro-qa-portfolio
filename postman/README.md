@@ -74,6 +74,14 @@ Resultado obtido:
 - Resultado: `200 OK`
 - Observação: retorno com métricas consolidadas do dashboard.
 
+- ### Cuts
+- Endpoint validado: `GET /cuts`
+- Ambiente: Production
+- Autenticação: Bearer Token
+- Resultado: `200 OK`
+- Observação: retorno com dados reais de cortes cadastrados, incluindo campos como `id`, `carne.nome`, `categoria`, `data`, `mes`, `pesoBruto` e `pesoUtil`.
+
+
 ## Evidências relacionadas
 Arquivos salvos em:
 
@@ -81,6 +89,7 @@ Arquivos salvos em:
 - `evidencias/postman-auth-register-201-created.png`
 - `evidencias/postman-push-vapid-key-200-ok.png`
 - `evidencias/postman-core-dashboard-200-ok.png`
+- `evidencias/postman-core-cuts-200-ok.png`
 
 ## Casos de teste relacionados
 
@@ -88,6 +97,7 @@ Arquivos salvos em:
 - `casos-de-teste/CT-004-register-api-postman.md`
 - `casos-de-teste/CT-005-get-vapid-key-postman.md`
 - `casos-de-teste/CT-006-dashboard-core-features-postman.md`
+- `casos-de-teste/CT-007-cuts-core-features-postman.md`
 
   
 ## Status atual
