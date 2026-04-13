@@ -45,9 +45,10 @@ Documentar os principais endpoints identificados e/ou validados durante a fase d
 
 | Método | Endpoint | Módulo | Status | Observação |
 |--------|----------|--------|--------|------------|
-| GET | `/dashboard` | Core Features | Identificado | Confirmado via Network do navegador |
-| GET | `/cuts` | Core Features | Identificado | Confirmado via Network do navegador |
-| GET | `/meats` | Core Features | Identificado | Confirmado via Network do navegador |
+| GET | `/dashboard` | Core Features | Validado | Confirmado via Network e validado via Postman |
+| GET | `/cuts` | Core Features | Validado | Confirmado via Network e validado via Postman |
+| GET | `/meats` | Core Features | Validado | Confirmado via Network e validado via Postman |
+
 
 
 ## 5. URLs completas confirmadas via Network
@@ -66,7 +67,7 @@ Documentar os principais endpoints identificados e/ou validados durante a fase d
 - O mapeamento será atualizado conforme novos testes forem executados.
 
 ## Próximos passos
-- Confirmar as URLs completas de `/cuts` e `/meats`
-- Criar requests dessas rotas no Postman
-- Continuar a cobertura do módulo Core Features
-- Revisar o módulo Push após esclarecimento do fluxo de subscribe
+- Expandir o mapeamento para outros endpoints consumidos pelo frontend
+- Continuar a validação prática de rotas da API via Postman
+- Manter README, evidências e casos de teste sincronizados com os testes executados
+- Revisar o módulo Push após esclarecimento técnico do fluxo de subscribe
