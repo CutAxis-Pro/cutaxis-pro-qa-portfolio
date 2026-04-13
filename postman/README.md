@@ -105,7 +105,7 @@ Arquivos salvos em:
 - `casos-de-teste/CT-005-get-vapid-key-postman.md`
 - `casos-de-teste/CT-006-dashboard-core-features-postman.md`
 - `casos-de-teste/CT-007-cuts-core-features-postman.md`
-
+- `casos-de-teste/CT-008-meats-core-features-postman.md`
   
 ## Status atual
 Concluído:
