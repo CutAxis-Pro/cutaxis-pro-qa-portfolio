@@ -65,13 +65,30 @@ Resultado obtido:
 - Retorno da publicKey
 - Resposta válida em JSON
 
-  
+## Core Features
+
+### Dashboard
+- Endpoint validado: `GET /dashboard`
+- Ambiente: Production
+- Autenticação: Bearer Token
+- Resultado: `200 OK`
+- Observação: retorno com métricas consolidadas do dashboard.
+
 ## Evidências relacionadas
 Arquivos salvos em:
 
 - `evidencias/postman-auth-login-200-ok.png`
 - `evidencias/postman-auth-register-201-created.png`
 - `evidencias/postman-push-vapid-key-200-ok.png`
+- `evidencias/postman-core-dashboard-200-ok.png`
+
+## Casos de teste relacionados
+
+- `casos-de-teste/CT-003-login-api-postman.md`
+- `casos-de-teste/CT-004-register-api-postman.md`
+- `casos-de-teste/CT-005-get-vapid-key-postman.md`
+- `casos-de-teste/CT-006-dashboard-core-features-postman.md`
+
   
 ## Status atual
 Concluído:
