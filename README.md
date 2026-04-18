@@ -60,7 +60,7 @@ O fluxo foi executado com sucesso em teste real, com evidência de:
 
 ---
 
-## ✅ Validação recente — CAPA-31 — Retorno pós-checkout do Stripe
+## ✅ Validação recente   — CAPA-31 — Retorno pós-checkout do Stripe
 
 Foi validada com sucesso a correção do fluxo de retorno pós-checkout de assinatura no CutAxis Pro.
 
