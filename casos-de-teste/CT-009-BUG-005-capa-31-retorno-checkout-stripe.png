@@ -1,0 +1,72 @@
+# Caso de Teste — CAPA-31
+
+## Identificação
+- **ID do caso de teste:** CT-CAPA-31
+- **Relacionado a:** CAPA-31
+- **Tipo:** Teste funcional / Regressão
+- **Prioridade:** Alta
+- **Status:** Executado
+
+## Título
+Sincronização do estado de assinatura após retorno do checkout do Stripe
+
+## Objetivo
+Validar que, após a conclusão bem-sucedida do pagamento no Stripe, o frontend sincroniza corretamente o estado da assinatura com o backend, atualiza o estado local do usuário e direciona imediatamente para a experiência de assinante, sem exigir logout/login.
+
+## Contexto
+Foi identificado que, mesmo com o pagamento processado corretamente no backend, a interface retornava para a tela de **trial expirado** logo após o checkout. Entretanto, ao sair e entrar novamente, o usuário passava a aparecer como assinante, indicando que a persistência backend/webhook estava funcionando e que a falha ocorria na sincronização do estado no frontend após o retorno do Stripe.
+
+## Pré-condições
+- Usuário com trial expirado ou bloqueado para uso até realizar upgrade.
+- Usuário autenticado na aplicação.
+- Integração com Stripe funcionando corretamente.
+- Checkout configurado para retornar à aplicação após pagamento.
+- Backend persistindo corretamente o estado da assinatura após pagamento aprovado.
+
+## Massa de dados
+- Usuário de teste com conta válida.
+- Cartão de teste do Stripe para pagamento bem-sucedido.
+- Assinatura/plano PRO disponível para contratação.
+
+## Passos para execução
+1. Acessar a aplicação com um usuário em estado de trial expirado.
+2. Iniciar o fluxo de upgrade de assinatura.
+3. Ser redirecionado ao checkout do Stripe.
+4. Concluir o pagamento com sucesso.
+5. Aguardar o retorno automático para a aplicação.
+6. Observar a tela exibida imediatamente após o retorno do Stripe.
+7. Validar se o frontend consulta novamente o estado do usuário.
+8. Confirmar se o estado local (`currentUser` / `localStorage`) foi atualizado.
+9. Verificar se a tela/modal de trial expirado foi removida.
+10. Confirmar se o usuário entrou diretamente na experiência de assinante, sem necessidade de logout/login.
+
+## Resultado esperado
+Após o pagamento aprovado no Stripe, a aplicação deve:
+- consultar novamente o backend para obter o estado atualizado da assinatura;
+- atualizar o estado local do usuário;
+- remover a tela ou bloqueio de trial expirado;
+- refletir imediatamente a condição de assinante ativo;
+- permitir acesso direto à área de assinante sem exigir logout/login;
+- manter consistência entre `/auth/me`, estado em memória e `localStorage`.
+
+## Resultado obtido
+Após a correção implementada, o frontend passou a sincronizar corretamente o estado da assinatura no retorno do checkout do Stripe. O usuário deixou de voltar para a tela de trial expirado e passou a acessar diretamente a experiência de assinante, sem necessidade de logout/login adicional. O estado local da aplicação permaneceu consistente com o retorno do backend.
+
+## Status final
+**PASS**
+
+## Critérios de aceite validados
+- [x] Após checkout bem-sucedido, o usuário não retorna para a tela de trial expirado.
+- [x] O estado local reflete a assinatura ativa sem exigir novo login.
+- [x] `localStorage/currentUser` e backend permanecem consistentes após o retorno.
+- [x] O usuário entra diretamente na área de assinante.
+
+## Evidências
+- `BUG-005-capa-31-retorno-checkout-stripe.png`
+- `BUG-005-capa-31-assinatura-ativa-pos-pagamento.png`
+- `BUG-005-capa-31-sincronizacao-estado-local.png`
+
+## Observações
+- A causa raiz estava relacionada à ausência de sincronização imediata do frontend após o retorno do checkout.
+- O backend já persistia corretamente o estado da assinatura, conforme evidenciado pelo comportamento após novo login.
+- A correção exigiu atualização do estado local após retorno do Stripe, com sincronização explícita do usuário autenticado.
