@@ -93,5 +93,14 @@ Bug validado como corrigido.
 - fluxos com Stripe exigem atenção especial ao retorno, sincronização e persistência da sessão
 - testes de regressão devem cobrir refresh, logout/login e cenários de cancelamento
 
+- ## Evidências anexadas
+- [Fluxo principal corrigido](../evidencias/capa-31/01-capa31-fluxo-principal-assinante.png)
+- [Upgrade com usuário autenticado](../evidencias/capa-31/02-capa31-upgrade-usuario-autenticado.png)
+- [Modal de cancelamento](../evidencias/capa-31/03-capa31-cancelamento-modal.png)
+- [Login após cancelamento](../evidencias/capa-31/04-capa31-login-pos-cancelamento.png)
+- [Validade da assinatura após cancelamento](../evidencias/capa-31/05-capa31-validade-assinatura.png)
+- [Console sem erro crítico](../evidencias/capa-31/06-capa31-console-sem-erro-critico.png)
+
+
 ## Status final
 **PASS — CAPA-31 validada funcionalmente**
