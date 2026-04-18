@@ -58,6 +58,48 @@ O fluxo foi executado com sucesso em teste real, com evidência de:
 - `evidencias/relatorio-mensal-terminal.png`
 - `evidencias/relatorio-mensal-mobile-comprovacao.png`
 
+---
+
+## ✅ Validação recente — CAPA-31 — Retorno pós-checkout do Stripe
+
+Foi validada com sucesso a correção do fluxo de retorno pós-checkout de assinatura no CutAxis Pro.
+
+### Cenário validado
+Durante os testes, foi identificado que, após concluir o pagamento no Stripe, o usuário nem sempre era encaminhado diretamente para dentro da aplicação como assinante. Em alguns casos, o sistema retornava para a tela de trial expirado ou só refletia o status correto após novo login.
+
+### Correção validada
+Após a correção:
+- o usuário retorna do checkout diretamente para dentro da aplicação;
+- o status é atualizado corretamente para **Assinante**;
+- não é mais necessário fazer novo login para refletir a assinatura;
+- o fluxo permanece estável após refresh e após logout/login.
+
+### Regressão executada
+- fluxo principal com usuário em trial expirado;
+- upgrade com usuário já autenticado dentro da aplicação;
+- persistência da assinatura após refresh;
+- persistência da assinatura após logout/login;
+- validação do console sem erro crítico do bug original.
+
+### Observação complementar
+Durante o teste de cancelamento, foi observado que a assinatura permanece válida até o fim do período pago. Esse comportamento foi registrado como **regra de negócio a confirmar**, sem impacto na validação da CAPA-31.
+
+### Artefatos relacionados
+- [BUG-005 — CAPA-31 — Retorno pós-checkout do Stripe não promovia o usuário imediatamente para assinante](./bugs-encontrados/BUG-005-capa-31-retorno-pos-checkout-stripe.md)
+
+### Evidências
+- [Fluxo principal corrigido](./evidencias/capa-31/01-capa31-fluxo-principal-assinante.png)
+- [Upgrade com usuário autenticado](./evidencias/capa-31/02-capa31-upgrade-usuario-autenticado.png)
+- [Modal de cancelamento](./evidencias/capa-31/03-capa31-cancelamento-modal.png)
+- [Login após cancelamento](./evidencias/capa-31/04-capa31-login-pos-cancelamento.png)
+- [Validade da assinatura após cancelamento](./evidencias/capa-31/05-capa31-validade-assinatura.png)
+- [Console sem erro crítico](./evidencias/capa-31/06-capa31-console-sem-erro-critico.png)
+
+### Resultado final
+**Status: PASS**  
+Correção validada com sucesso em ambiente publicado, com evidências visuais e regressão funcional executada.
+
+
 ## 🎯 Competências demonstradas neste projeto
 
 - Testes funcionais end-to-end
