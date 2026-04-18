@@ -99,6 +99,13 @@ Durante o teste de cancelamento, foi observado que a assinatura permanece válid
 **Status: PASS**  
 Correção validada com sucesso em ambiente publicado, com evidências visuais e regressão funcional executada.
 
+## Validações recentes
+
+### CAPA-32 — Persistência do cancelamento de assinatura
+Correção validada com sucesso no fluxo de cancelamento de assinatura. Após o cancelamento, o utilizador mantém acesso até ao fim do período pago, a interface exibe corretamente o estado **"Assinatura cancelada"** e a persistência foi confirmada após novo login.
+
+📄 Documentação do caso: [BUG-006 — CAPA-32: cancelamento de assinatura não persistia corretamente após novo login](./bugs-encontrados/BUG-006-capa-32-cancelamento-assinatura-persistencia.md)
+
 
 ## 🎯 Competências demonstradas neste projeto
 
